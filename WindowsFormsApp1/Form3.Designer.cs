@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.IDtextBox12 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.IDtextBox12 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.studentNameLabel = new System.Windows.Forms.Label();
             this.PhotoNumberLabel = new System.Windows.Forms.Label();
@@ -98,13 +98,13 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.stuClassCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isPhotoNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -178,6 +178,15 @@
             this.label20.Size = new System.Drawing.Size(19, 20);
             this.label20.TabIndex = 26;
             this.label20.Text = "*";
+            // 
+            // IDtextBox12
+            // 
+            this.IDtextBox12.Location = new System.Drawing.Point(113, 0);
+            this.IDtextBox12.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
+            this.IDtextBox12.Name = "IDtextBox12";
+            this.IDtextBox12.Size = new System.Drawing.Size(89, 25);
+            this.IDtextBox12.TabIndex = 28;
+            this.IDtextBox12.Visible = false;
             // 
             // label19
             // 
@@ -410,15 +419,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "身份证号";
             // 
-            // IDtextBox12
-            // 
-            this.IDtextBox12.Location = new System.Drawing.Point(113, 0);
-            this.IDtextBox12.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.IDtextBox12.Name = "IDtextBox12";
-            this.IDtextBox12.Size = new System.Drawing.Size(89, 25);
-            this.IDtextBox12.TabIndex = 28;
-            this.IDtextBox12.Visible = false;
-            // 
             // groupBox2
             // 
             this.groupBox2.AutoSize = true;
@@ -540,7 +540,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(71, 105);
+            this.button1.Location = new System.Drawing.Point(71, 166);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 41);
@@ -573,7 +573,7 @@
             // 
             // readBarCode
             // 
-            this.readBarCode.Location = new System.Drawing.Point(71, 169);
+            this.readBarCode.Location = new System.Drawing.Point(71, 105);
             this.readBarCode.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.readBarCode.Name = "readBarCode";
             this.readBarCode.Size = new System.Drawing.Size(169, 41);
@@ -637,14 +637,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -662,14 +662,14 @@
             this.isPay,
             this.isPhoto,
             this.isManual});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.Location = new System.Drawing.Point(6, 65);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dataGridView1.MultiSelect = false;
@@ -876,6 +876,13 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "各班已照相人数";
             // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(49, 26);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(76, 25);
+            this.textBox12.TabIndex = 31;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(145, 24);
@@ -884,6 +891,7 @@
             this.button2.TabIndex = 30;
             this.button2.Text = "计算总价";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label22
             // 
@@ -924,13 +932,6 @@
             this.totalMoney.HeaderText = "总金额";
             this.totalMoney.Name = "totalMoney";
             // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(49, 26);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(76, 25);
-            this.textBox12.TabIndex = 31;
-            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -944,7 +945,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "当前项目";
+            this.Text = "+9";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form3_FormClosing);
             this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);

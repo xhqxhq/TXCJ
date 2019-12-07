@@ -731,7 +731,60 @@ namespace WindowsFormsApp1
                     dataTable = accessHelper.GetDataTableFromDB(selectIdSqlStr);
 
                     //上方显示
-                    dataTable.Rows[0][0];
+                    //把查询的数据显示到form3的身份信息框中
+                    //textBox1.Text = dataTable.Rows[0][0].ToString();
+                    //textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString().Trim();
+                    textBox3.Text = dataTable.Rows[0][4].ToString();
+                    textBox4.Text = dataTable.Rows[0][5].ToString();
+                    //textBox5.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString().Trim();
+                    //textBox6.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString().Trim();
+                    //textBox7.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString().Trim();
+                    //textBox8.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString().Trim();
+                    //textBox9.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString().Trim();
+                    //textBox10.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString().Trim();
+                    //textBox11.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString().Trim();
+                    //IDtextBox12.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
+
+                    //PhotoNumberLabel.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
+                    //studentNameLabel.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
+
+                    ////是否缴费，1已缴费，0未缴费
+                    //if (int.Parse(dataGridView1.CurrentRow.Cells[12].Value.ToString().Trim()) == 1)
+                    //{
+                    //    //已缴费：
+                    //    radioButton1.Checked = true;
+                    //}
+                    //else if (int.Parse(dataGridView1.CurrentRow.Cells[12].Value.ToString().Trim()) == 0)
+                    //{
+                    //    radioButton2.Checked = true;
+                    //}
+
+                    ////清除图片
+                    //pictureBox1.Image = null;
+                    //pictureBox2.Image = null;
+
+                    ////显示身份证图片和采集图片(如果有则显示)
+                    ////身份证图片绝对路径
+                    //string idCardPicture = Utils.FileUtils.ProjectPath + projectName + "\\bmp\\" + textBox3.Text + ".bmp";
+                    ////采集照片的绝对路径
+                    //string photo = Utils.FileUtils.ProjectPath + projectName + "\\photo\\" + textBox3.Text + ".JPG";
+                    //if (File.Exists(idCardPicture))//身份证图片
+                    //{
+                    //    //pictureBox1.Image = Image.FromFile(idCardPicture);
+                    //    System.Drawing.Image img = System.Drawing.Image.FromFile(idCardPicture);
+                    //    System.Drawing.Image bmp = new System.Drawing.Bitmap(img);
+                    //    img.Dispose();
+                    //    pictureBox1.Image = bmp;
+                    //}//采集照片
+                    //if (File.Exists(photo))
+                    //{
+                    //    /*pictureBox2.Load("d:\\DSC_7006.JPG");*/
+                    //    //pictureBox2.Image = Image.FromFile(photo);
+                    //    System.Drawing.Image img = System.Drawing.Image.FromFile(photo);
+                    //    System.Drawing.Image bmp = new System.Drawing.Bitmap(img);
+                    //    img.Dispose();
+                    //    pictureBox2.Image = bmp;
+                    //}
 
                     //下方显示
                     //设置datagridview的数据源
@@ -740,6 +793,11 @@ namespace WindowsFormsApp1
                     dataGridView1.Rows[0].DefaultCellStyle.BackColor = Color.Red;
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
