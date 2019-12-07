@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
-{//Test注释！！！
+{//Test注释！
     static class Program
     {
         /// <summary>
