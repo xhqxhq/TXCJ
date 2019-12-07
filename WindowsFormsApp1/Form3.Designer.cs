@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.IDtextBox12 = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -98,12 +97,12 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -117,7 +116,6 @@
             // groupBox1
             // 
             this.groupBox1.AutoSize = true;
-            this.groupBox1.Controls.Add(this.label21);
             this.groupBox1.Controls.Add(this.label20);
             this.groupBox1.Controls.Add(this.IDtextBox12);
             this.groupBox1.Controls.Add(this.label19);
@@ -146,43 +144,32 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(11, 10);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.groupBox1.Size = new System.Drawing.Size(451, 460);
+            this.groupBox1.Size = new System.Drawing.Size(401, 383);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "身份信息";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.ForeColor = System.Drawing.Color.Red;
-            this.label21.Location = new System.Drawing.Point(422, 137);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(22, 24);
-            this.label21.TabIndex = 27;
-            this.label21.Text = "*";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label20.ForeColor = System.Drawing.Color.Red;
-            this.label20.Location = new System.Drawing.Point(422, 101);
+            this.label20.Location = new System.Drawing.Point(375, 84);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(22, 24);
+            this.label20.Size = new System.Drawing.Size(19, 20);
             this.label20.TabIndex = 26;
             this.label20.Text = "*";
             // 
             // IDtextBox12
             // 
-            this.IDtextBox12.Location = new System.Drawing.Point(127, 0);
+            this.IDtextBox12.Location = new System.Drawing.Point(113, 0);
             this.IDtextBox12.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.IDtextBox12.Name = "IDtextBox12";
-            this.IDtextBox12.Size = new System.Drawing.Size(100, 28);
+            this.IDtextBox12.Size = new System.Drawing.Size(89, 25);
             this.IDtextBox12.TabIndex = 28;
             this.IDtextBox12.Visible = false;
             // 
@@ -191,116 +178,116 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(422, 31);
+            this.label19.Location = new System.Drawing.Point(375, 26);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(22, 24);
+            this.label19.Size = new System.Drawing.Size(19, 20);
             this.label19.TabIndex = 25;
             this.label19.Text = "*";
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(127, 301);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.textBox9.Location = new System.Drawing.Point(113, 251);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(288, 28);
+            this.textBox9.Size = new System.Drawing.Size(256, 25);
             this.textBox9.TabIndex = 21;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(73, 307);
+            this.label18.Location = new System.Drawing.Point(65, 256);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(44, 18);
+            this.label18.Size = new System.Drawing.Size(37, 15);
             this.label18.TabIndex = 23;
             this.label18.Text = "学制";
             // 
             // textBox11
             // 
-            this.textBox11.Location = new System.Drawing.Point(127, 367);
+            this.textBox11.Location = new System.Drawing.Point(113, 306);
             this.textBox11.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(288, 28);
+            this.textBox11.Size = new System.Drawing.Size(256, 25);
             this.textBox11.TabIndex = 23;
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(127, 335);
+            this.textBox10.Location = new System.Drawing.Point(113, 279);
             this.textBox10.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(288, 28);
+            this.textBox10.Size = new System.Drawing.Size(256, 25);
             this.textBox10.TabIndex = 22;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(127, 269);
+            this.textBox8.Location = new System.Drawing.Point(113, 224);
             this.textBox8.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(288, 28);
+            this.textBox8.Size = new System.Drawing.Size(256, 25);
             this.textBox8.TabIndex = 20;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(127, 235);
+            this.textBox7.Location = new System.Drawing.Point(113, 196);
             this.textBox7.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(288, 28);
+            this.textBox7.Size = new System.Drawing.Size(256, 25);
             this.textBox7.TabIndex = 19;
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(127, 199);
+            this.textBox6.Location = new System.Drawing.Point(113, 166);
             this.textBox6.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(288, 28);
+            this.textBox6.Size = new System.Drawing.Size(256, 25);
             this.textBox6.TabIndex = 18;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(127, 167);
+            this.textBox5.Location = new System.Drawing.Point(113, 139);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(288, 28);
+            this.textBox5.Size = new System.Drawing.Size(256, 25);
             this.textBox5.TabIndex = 17;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 133);
+            this.textBox2.Location = new System.Drawing.Point(113, 111);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(288, 28);
+            this.textBox2.Size = new System.Drawing.Size(256, 25);
             this.textBox2.TabIndex = 16;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 97);
+            this.textBox1.Location = new System.Drawing.Point(113, 81);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(288, 28);
+            this.textBox1.Size = new System.Drawing.Size(256, 25);
             this.textBox1.TabIndex = 15;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(127, 65);
+            this.textBox4.Location = new System.Drawing.Point(113, 54);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(288, 28);
+            this.textBox4.Size = new System.Drawing.Size(256, 25);
             this.textBox4.TabIndex = 14;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 30);
+            this.textBox3.Location = new System.Drawing.Point(113, 25);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(288, 28);
+            this.textBox3.Size = new System.Drawing.Size(256, 25);
             this.textBox3.TabIndex = 13;
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(274, 413);
+            this.radioButton2.Location = new System.Drawing.Point(244, 344);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(87, 22);
+            this.radioButton2.Size = new System.Drawing.Size(73, 19);
             this.radioButton2.TabIndex = 25;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "未缴费";
@@ -309,10 +296,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(127, 413);
+            this.radioButton1.Location = new System.Drawing.Point(113, 344);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(87, 22);
+            this.radioButton1.Size = new System.Drawing.Size(73, 19);
             this.radioButton1.TabIndex = 24;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "已缴费";
@@ -321,99 +308,99 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(40, 413);
+            this.label11.Location = new System.Drawing.Point(36, 344);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(80, 18);
+            this.label11.Size = new System.Drawing.Size(67, 15);
             this.label11.TabIndex = 10;
             this.label11.Text = "是否缴费";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(40, 373);
+            this.label10.Location = new System.Drawing.Point(36, 311);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 18);
+            this.label10.Size = new System.Drawing.Size(67, 15);
             this.label10.TabIndex = 9;
             this.label10.Text = "毕业年份";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 341);
+            this.label9.Location = new System.Drawing.Point(9, 284);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 18);
+            this.label9.Size = new System.Drawing.Size(97, 15);
             this.label9.TabIndex = 8;
             this.label9.Text = "当前所在年级";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(76, 275);
+            this.label8.Location = new System.Drawing.Point(68, 229);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 18);
+            this.label8.Size = new System.Drawing.Size(37, 15);
             this.label8.TabIndex = 7;
             this.label8.Text = "层次";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(76, 240);
+            this.label7.Location = new System.Drawing.Point(68, 200);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 18);
+            this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 6;
             this.label7.Text = "班级";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(76, 205);
+            this.label6.Location = new System.Drawing.Point(68, 171);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 18);
+            this.label6.Size = new System.Drawing.Size(37, 15);
             this.label6.TabIndex = 5;
             this.label6.Text = "专业";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(76, 173);
+            this.label5.Location = new System.Drawing.Point(68, 144);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 18);
+            this.label5.Size = new System.Drawing.Size(37, 15);
             this.label5.TabIndex = 4;
             this.label5.Text = "院系";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(76, 138);
+            this.label4.Location = new System.Drawing.Point(68, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 18);
+            this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 3;
             this.label4.Text = "性别";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 103);
+            this.label3.Location = new System.Drawing.Point(68, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 18);
+            this.label3.Size = new System.Drawing.Size(37, 15);
             this.label3.TabIndex = 2;
             this.label3.Text = "姓名";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 71);
+            this.label2.Location = new System.Drawing.Point(68, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 18);
+            this.label2.Size = new System.Drawing.Size(37, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "学号";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 36);
+            this.label1.Location = new System.Drawing.Point(36, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 18);
+            this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "身份证号";
             // 
@@ -428,11 +415,11 @@
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Controls.Add(this.pictureBox1);
-            this.groupBox2.Location = new System.Drawing.Point(487, 12);
+            this.groupBox2.Location = new System.Drawing.Point(433, 10);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.groupBox2.Size = new System.Drawing.Size(485, 461);
+            this.groupBox2.Size = new System.Drawing.Size(431, 384);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "图像信息";
@@ -443,9 +430,9 @@
             this.studentNameLabel.BackColor = System.Drawing.Color.White;
             this.studentNameLabel.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.studentNameLabel.ForeColor = System.Drawing.Color.Red;
-            this.studentNameLabel.Location = new System.Drawing.Point(166, 409);
+            this.studentNameLabel.Location = new System.Drawing.Point(148, 341);
             this.studentNameLabel.Name = "studentNameLabel";
-            this.studentNameLabel.Size = new System.Drawing.Size(42, 28);
+            this.studentNameLabel.Size = new System.Drawing.Size(36, 24);
             this.studentNameLabel.TabIndex = 9;
             this.studentNameLabel.Text = "  ";
             // 
@@ -455,9 +442,9 @@
             this.PhotoNumberLabel.BackColor = System.Drawing.Color.White;
             this.PhotoNumberLabel.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.PhotoNumberLabel.ForeColor = System.Drawing.Color.Red;
-            this.PhotoNumberLabel.Location = new System.Drawing.Point(166, 365);
+            this.PhotoNumberLabel.Location = new System.Drawing.Point(148, 304);
             this.PhotoNumberLabel.Name = "PhotoNumberLabel";
-            this.PhotoNumberLabel.Size = new System.Drawing.Size(42, 28);
+            this.PhotoNumberLabel.Size = new System.Drawing.Size(36, 24);
             this.PhotoNumberLabel.TabIndex = 8;
             this.PhotoNumberLabel.Text = "  ";
             // 
@@ -465,9 +452,9 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(37, 409);
+            this.label15.Location = new System.Drawing.Point(33, 341);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(124, 28);
+            this.label15.Size = new System.Drawing.Size(106, 24);
             this.label15.TabIndex = 5;
             this.label15.Text = "姓    名";
             // 
@@ -475,46 +462,46 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(37, 365);
+            this.label14.Location = new System.Drawing.Point(33, 304);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 28);
+            this.label14.Size = new System.Drawing.Size(106, 24);
             this.label14.TabIndex = 4;
             this.label14.Text = "照片编号";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(303, 319);
+            this.label13.Location = new System.Drawing.Point(269, 266);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 18);
+            this.label13.Size = new System.Drawing.Size(67, 15);
             this.label13.TabIndex = 3;
             this.label13.Text = "采集图片";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(99, 319);
+            this.label12.Location = new System.Drawing.Point(88, 266);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 18);
+            this.label12.Size = new System.Drawing.Size(82, 15);
             this.label12.TabIndex = 2;
             this.label12.Text = "身份证图片";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(243, 48);
+            this.pictureBox2.Location = new System.Drawing.Point(216, 40);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(190, 229);
+            this.pictureBox2.Size = new System.Drawing.Size(169, 191);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(37, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(33, 40);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(190, 229);
+            this.pictureBox1.Size = new System.Drawing.Size(169, 191);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -527,21 +514,21 @@
             this.groupBox3.Controls.Add(this.exportNumberedData);
             this.groupBox3.Controls.Add(this.readBarCode);
             this.groupBox3.Controls.Add(this.readIdCard);
-            this.groupBox3.Location = new System.Drawing.Point(998, 12);
+            this.groupBox3.Location = new System.Drawing.Point(887, 10);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.groupBox3.Size = new System.Drawing.Size(345, 460);
+            this.groupBox3.Size = new System.Drawing.Size(307, 383);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "数据处理与转换";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(80, 126);
+            this.button1.Location = new System.Drawing.Point(71, 166);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 49);
+            this.button1.Size = new System.Drawing.Size(169, 41);
             this.button1.TabIndex = 6;
             this.button1.Text = "生成条形码编号";
             this.button1.UseVisualStyleBackColor = true;
@@ -549,10 +536,10 @@
             // 
             // conversePhotoName
             // 
-            this.conversePhotoName.Location = new System.Drawing.Point(80, 347);
+            this.conversePhotoName.Location = new System.Drawing.Point(71, 289);
             this.conversePhotoName.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.conversePhotoName.Name = "conversePhotoName";
-            this.conversePhotoName.Size = new System.Drawing.Size(190, 49);
+            this.conversePhotoName.Size = new System.Drawing.Size(169, 41);
             this.conversePhotoName.TabIndex = 5;
             this.conversePhotoName.Text = "图片文件名转换";
             this.conversePhotoName.UseVisualStyleBackColor = true;
@@ -560,10 +547,10 @@
             // 
             // exportNumberedData
             // 
-            this.exportNumberedData.Location = new System.Drawing.Point(80, 275);
+            this.exportNumberedData.Location = new System.Drawing.Point(71, 229);
             this.exportNumberedData.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.exportNumberedData.Name = "exportNumberedData";
-            this.exportNumberedData.Size = new System.Drawing.Size(190, 49);
+            this.exportNumberedData.Size = new System.Drawing.Size(169, 41);
             this.exportNumberedData.TabIndex = 4;
             this.exportNumberedData.Text = "编号数据导出";
             this.exportNumberedData.UseVisualStyleBackColor = true;
@@ -571,10 +558,10 @@
             // 
             // readBarCode
             // 
-            this.readBarCode.Location = new System.Drawing.Point(80, 203);
+            this.readBarCode.Location = new System.Drawing.Point(71, 105);
             this.readBarCode.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.readBarCode.Name = "readBarCode";
-            this.readBarCode.Size = new System.Drawing.Size(190, 49);
+            this.readBarCode.Size = new System.Drawing.Size(169, 41);
             this.readBarCode.TabIndex = 3;
             this.readBarCode.Text = "扫描条形码编号";
             this.readBarCode.UseVisualStyleBackColor = true;
@@ -582,10 +569,10 @@
             // 
             // readIdCard
             // 
-            this.readIdCard.Location = new System.Drawing.Point(80, 48);
+            this.readIdCard.Location = new System.Drawing.Point(71, 40);
             this.readIdCard.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.readIdCard.Name = "readIdCard";
-            this.readIdCard.Size = new System.Drawing.Size(190, 49);
+            this.readIdCard.Size = new System.Drawing.Size(169, 41);
             this.readIdCard.TabIndex = 2;
             this.readIdCard.Text = "阅读身份证编号";
             this.readIdCard.UseVisualStyleBackColor = true;
@@ -601,21 +588,20 @@
             this.groupBox4.Controls.Add(this.button7);
             this.groupBox4.Controls.Add(this.label16);
             this.groupBox4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 476);
+            this.groupBox4.Location = new System.Drawing.Point(11, 397);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.groupBox4.Size = new System.Drawing.Size(1797, 391);
+            this.groupBox4.Size = new System.Drawing.Size(1597, 326);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "数据展示";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(340, 24);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Location = new System.Drawing.Point(302, 20);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 34);
+            this.button4.Size = new System.Drawing.Size(67, 28);
             this.button4.TabIndex = 10;
             this.button4.Text = "查询";
             this.button4.UseVisualStyleBackColor = true;
@@ -624,9 +610,9 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(692, 24);
+            this.label17.Location = new System.Drawing.Point(615, 20);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(629, 18);
+            this.label17.Size = new System.Drawing.Size(525, 15);
             this.label17.TabIndex = 6;
             this.label17.Text = "红色标识框为当前最大编号的学生信息,蓝色标识框为当前鼠标选中的学生信息";
             // 
@@ -636,14 +622,14 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -661,15 +647,15 @@
             this.isPay,
             this.isPhoto,
             this.isManual});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 78);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 65);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -677,7 +663,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1783, 289);
+            this.dataGridView1.Size = new System.Drawing.Size(1585, 241);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -833,10 +819,10 @@
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(233, 23);
+            this.button9.Location = new System.Drawing.Point(207, 19);
             this.button9.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 35);
+            this.button9.Size = new System.Drawing.Size(67, 29);
             this.button9.TabIndex = 1;
             this.button9.Text = "新增";
             this.button9.UseVisualStyleBackColor = true;
@@ -844,10 +830,10 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(127, 23);
+            this.button7.Location = new System.Drawing.Point(113, 19);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 35);
+            this.button7.Size = new System.Drawing.Size(67, 29);
             this.button7.TabIndex = 0;
             this.button7.Text = "保存";
             this.button7.UseVisualStyleBackColor = true;
@@ -856,9 +842,9 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 30);
+            this.label16.Location = new System.Drawing.Point(7, 25);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(116, 18);
+            this.label16.Size = new System.Drawing.Size(97, 15);
             this.label16.TabIndex = 0;
             this.label16.Text = "当前项操作：";
             // 
@@ -870,80 +856,78 @@
             this.groupBox5.Controls.Add(this.label24);
             this.groupBox5.Controls.Add(this.label23);
             this.groupBox5.Controls.Add(this.label22);
-            this.groupBox5.Location = new System.Drawing.Point(1362, 12);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox5.Location = new System.Drawing.Point(1211, 10);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox5.Size = new System.Drawing.Size(447, 461);
+            this.groupBox5.Size = new System.Drawing.Size(397, 384);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "缴费信息";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label22.Location = new System.Drawing.Point(25, 36);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(124, 28);
-            this.label22.TabIndex = 10;
-            this.label22.Text = "班    级";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label23.Location = new System.Drawing.Point(25, 173);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(152, 28);
-            this.label23.TabIndex = 11;
-            this.label23.Text = "应采集人数";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label24.Location = new System.Drawing.Point(25, 249);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(152, 28);
-            this.label24.TabIndex = 12;
-            this.label24.Text = "实采集人数";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label25.Location = new System.Drawing.Point(25, 97);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(124, 28);
-            this.label25.TabIndex = 13;
-            this.label25.Text = "单    价";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label26.Location = new System.Drawing.Point(25, 329);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(152, 28);
-            this.label26.TabIndex = 14;
-            this.label26.Text = "应缴纳费用";
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label27.Location = new System.Drawing.Point(25, 403);
+            this.label27.Location = new System.Drawing.Point(22, 336);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(152, 28);
+            this.label27.Size = new System.Drawing.Size(130, 24);
             this.label27.TabIndex = 15;
             this.label27.Text = "实缴纳费用";
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label26.Location = new System.Drawing.Point(22, 274);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(130, 24);
+            this.label26.TabIndex = 14;
+            this.label26.Text = "应缴纳费用";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label25.Location = new System.Drawing.Point(22, 81);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(106, 24);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "单    价";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label24.Location = new System.Drawing.Point(22, 207);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(130, 24);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "实采集人数";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label23.Location = new System.Drawing.Point(22, 144);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(130, 24);
+            this.label23.TabIndex = 11;
+            this.label23.Text = "应采集人数";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("宋体", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label22.Location = new System.Drawing.Point(22, 30);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(106, 24);
+            this.label22.TabIndex = 10;
+            this.label22.Text = "班    级";
+            // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1822, 847);
+            this.ClientSize = new System.Drawing.Size(1620, 706);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -1034,7 +1018,6 @@
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label PhotoNumberLabel;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label studentNameLabel;

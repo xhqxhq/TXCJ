@@ -59,7 +59,7 @@
             // 项目管理ToolStripMenuItem
             // 
             this.项目管理ToolStripMenuItem.Name = "项目管理ToolStripMenuItem";
-            this.项目管理ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.项目管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.项目管理ToolStripMenuItem.Text = "项目管理";
             // 
             // newProject

@@ -36,13 +36,14 @@ namespace WindowsFormsApp1
 
 
 
-
+        // 显示主界面
         private void Form3_Load(object sender, EventArgs e)
         {
             //允许其他线程访问主线程创建的控件
             //Control.CheckForIllegalCrossThreadCalls = false;
 
-            string sqlStr = "select * from info where ID <> 0 order by ID desc;";//筛选出数据库中编号不为0和空的数据
+            //string sqlStr = "select * from info where ID <> 0 order by ID desc;";//筛选出数据库中编号不为0和空的数据
+            string sqlStr = "select * from info order by ID desc;";//所有数据
             dataTable = new Utils.AccessHelper(Utils.FileUtils.ProjectPath + projectName + "\\dbf\\photoSystem.accdb").GetDataTableFromDB(sqlStr);
             //设置datagridview的数据源
             dataGridView1.DataSource = dataTable;
@@ -93,13 +94,13 @@ namespace WindowsFormsApp1
                 isPay = "0";
             }
 
-            //其中，身份证号，姓名，性别必填，其他依照需要选填
+            //其中，身份证号，姓名必填，其他依照需要选填
             if ("" == idCardNum)
                 MessageBox.Show("请输入身份证号！");
             else if ("" == stuName)
                 MessageBox.Show("请输入学生姓名！");
-            else if ("" == stuSex)
-                MessageBox.Show("请输入学生性别！");
+            //else if ("" == stuSex)
+            //    MessageBox.Show("请输入学生性别！");
             else if (idCardNum.Trim().Trim().ToCharArray().Length != 18)
             {
                 MessageBox.Show("身份证号输入有误！请重新输入！");
@@ -182,7 +183,6 @@ namespace WindowsFormsApp1
             //默认未缴费
             radioButton1.Checked = false;
             radioButton2.Checked = true;
-
 
         }
 
@@ -655,22 +655,51 @@ namespace WindowsFormsApp1
             textBox11.Text = "";
         }
 
-        // 根据身份证产生条形码，
+        //// 根据身份证产生条形码
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    // 1.设置条形码规格
+        //    EncodingOptions encodeOption = new EncodingOptions();
+        //    encodeOption.Height = 130; // 必须制定高度、宽度
+        //    encodeOption.Width = 240;
+
+        //    // 2.生成条形码图片并保存
+        //    ZXing.BarcodeWriter wr = new BarcodeWriter();
+        //    wr.Options = encodeOption;
+        //    wr.Format = BarcodeFormat.CODE_128;
+        //    Bitmap img = wr.Write(textBox3.Text); // 生成条形码图片
+        //    Bitmap newbm = KiSetText(img, textBox1.Text, 10, 5);//添加名字
+        //    string filePath = System.AppDomain.CurrentDomain.BaseDirectory + "\\project\\" + projectName + "\\jpg\\" + textBox3.Text + ".jpg";
+        //    newbm.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+        //    MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
+        //    DialogResult dr = MessageBox.Show("条形码已经生成！ ", "系统提示", messButton);
+        //}
+
+        // 批量产生条形码
         private void button1_Click(object sender, EventArgs e)
         {
             // 1.设置条形码规格
             EncodingOptions encodeOption = new EncodingOptions();
             encodeOption.Height = 130; // 必须制定高度、宽度
             encodeOption.Width = 240;
-
-            // 2.生成条形码图片并保存
             ZXing.BarcodeWriter wr = new BarcodeWriter();
             wr.Options = encodeOption;
             wr.Format = BarcodeFormat.CODE_128;
-            Bitmap img = wr.Write(textBox3.Text); // 生成条形码图片
-            Bitmap newbm = KiSetText(img, textBox1.Text, 10, 5);//添加名字
-            string filePath = System.AppDomain.CurrentDomain.BaseDirectory + "\\project\\" + projectName + "\\jpg\\" + textBox3.Text + ".jpg";
-            newbm.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+            // 2.从datatable批量生成条形码图片并保存
+            string sqlStr = "select * from info order by ID desc;";//所有数据
+            dataTable = new Utils.AccessHelper(Utils.FileUtils.ProjectPath + projectName + "\\dbf\\photoSystem.accdb").GetDataTableFromDB(sqlStr);
+
+            for (int i=0; i < dataTable.Rows.Count; i++)
+            {
+                string idCardNum = dataTable.Rows[i][3].ToString();
+                Bitmap img = wr.Write(idCardNum);   // 根据身份证号生成条形码图片
+                Bitmap newbm = KiSetText(img, dataTable.Rows[i][1].ToString(), 10, 5);    //添加名字
+                string filePath = System.AppDomain.CurrentDomain.BaseDirectory + "\\project\\" + projectName + "\\jpg\\" + idCardNum + ".jpg";
+                newbm.Save(filePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+
+            // 生成结束弹出通知
             MessageBoxButtons messButton = MessageBoxButtons.OKCancel;
             DialogResult dr = MessageBox.Show("条形码已经生成！ ", "系统提示", messButton);
         }
@@ -732,59 +761,59 @@ namespace WindowsFormsApp1
 
                     //上方显示
                     //把查询的数据显示到form3的身份信息框中
-                    //textBox1.Text = dataTable.Rows[0][0].ToString();
-                    //textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString().Trim();
-                    textBox3.Text = dataTable.Rows[0][4].ToString();
-                    textBox4.Text = dataTable.Rows[0][5].ToString();
-                    //textBox5.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString().Trim();
-                    //textBox6.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString().Trim();
-                    //textBox7.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString().Trim();
-                    //textBox8.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString().Trim();
-                    //textBox9.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString().Trim();
-                    //textBox10.Text = dataGridView1.CurrentRow.Cells[10].Value.ToString().Trim();
-                    //textBox11.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString().Trim();
-                    //IDtextBox12.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
+                    textBox1.Text = dataTable.Rows[0][1].ToString();//姓名
+                    textBox2.Text = dataTable.Rows[0][2].ToString();//性别
+                    textBox3.Text = dataTable.Rows[0][3].ToString();//身份证号
+                    textBox4.Text = dataTable.Rows[0][4].ToString();//学号
+                    textBox5.Text = dataTable.Rows[0][5].ToString();//院系
+                    textBox6.Text = dataTable.Rows[0][6].ToString();//专业
+                    textBox7.Text = dataTable.Rows[0][7].ToString();//班级
+                    textBox8.Text = dataTable.Rows[0][8].ToString();//层次
+                    textBox9.Text = dataTable.Rows[0][9].ToString();//学制
+                    textBox10.Text = dataTable.Rows[0][10].ToString();//当前所在年级
+                    textBox11.Text = dataTable.Rows[0][11].ToString();//毕业年份
+                    IDtextBox12.Text = dataTable.Rows[0][0].ToString();//是否缴费
 
-                    //PhotoNumberLabel.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString().Trim();
-                    //studentNameLabel.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString().Trim();
+                    PhotoNumberLabel.Text = dataTable.Rows[0][0].ToString();//
+                    studentNameLabel.Text = dataTable.Rows[0][1].ToString();//
 
-                    ////是否缴费，1已缴费，0未缴费
-                    //if (int.Parse(dataGridView1.CurrentRow.Cells[12].Value.ToString().Trim()) == 1)
-                    //{
-                    //    //已缴费：
-                    //    radioButton1.Checked = true;
-                    //}
-                    //else if (int.Parse(dataGridView1.CurrentRow.Cells[12].Value.ToString().Trim()) == 0)
-                    //{
-                    //    radioButton2.Checked = true;
-                    //}
+                    //是否缴费，1已缴费，0未缴费
+                    if (int.Parse(dataTable.Rows[0][12].ToString()) == 1)
+                    {
+                        //已缴费：
+                        radioButton1.Checked = true;
+                    }
+                    else if (int.Parse(dataTable.Rows[0][12].ToString()) == 0)
+                    {
+                        radioButton2.Checked = true;
+                    }
 
-                    ////清除图片
-                    //pictureBox1.Image = null;
-                    //pictureBox2.Image = null;
+                    //清除图片
+                    pictureBox1.Image = null;
+                    pictureBox2.Image = null;
 
-                    ////显示身份证图片和采集图片(如果有则显示)
-                    ////身份证图片绝对路径
-                    //string idCardPicture = Utils.FileUtils.ProjectPath + projectName + "\\bmp\\" + textBox3.Text + ".bmp";
-                    ////采集照片的绝对路径
-                    //string photo = Utils.FileUtils.ProjectPath + projectName + "\\photo\\" + textBox3.Text + ".JPG";
-                    //if (File.Exists(idCardPicture))//身份证图片
-                    //{
-                    //    //pictureBox1.Image = Image.FromFile(idCardPicture);
-                    //    System.Drawing.Image img = System.Drawing.Image.FromFile(idCardPicture);
-                    //    System.Drawing.Image bmp = new System.Drawing.Bitmap(img);
-                    //    img.Dispose();
-                    //    pictureBox1.Image = bmp;
-                    //}//采集照片
-                    //if (File.Exists(photo))
-                    //{
-                    //    /*pictureBox2.Load("d:\\DSC_7006.JPG");*/
-                    //    //pictureBox2.Image = Image.FromFile(photo);
-                    //    System.Drawing.Image img = System.Drawing.Image.FromFile(photo);
-                    //    System.Drawing.Image bmp = new System.Drawing.Bitmap(img);
-                    //    img.Dispose();
-                    //    pictureBox2.Image = bmp;
-                    //}
+                    //显示身份证图片和采集图片(如果有则显示)
+                    //身份证图片绝对路径
+                    string idCardPicture = Utils.FileUtils.ProjectPath + projectName + "\\bmp\\" + textBox3.Text + ".bmp";
+                    //采集照片的绝对路径
+                    string photo = Utils.FileUtils.ProjectPath + projectName + "\\photo\\" + textBox3.Text + ".JPG";
+                    if (File.Exists(idCardPicture)) //身份证图片
+                    {
+                        //pictureBox1.Image = Image.FromFile(idCardPicture);
+                        System.Drawing.Image img = System.Drawing.Image.FromFile(idCardPicture);
+                        System.Drawing.Image bmp = new System.Drawing.Bitmap(img);
+                        img.Dispose();
+                        pictureBox1.Image = bmp;
+                    }
+                    if (File.Exists(photo)) //采集照片
+                    {
+                        /*pictureBox2.Load("d:\\DSC_7006.JPG");*/
+                        //pictureBox2.Image = Image.FromFile(photo);
+                        System.Drawing.Image img = System.Drawing.Image.FromFile(photo);
+                        System.Drawing.Image bmp = new System.Drawing.Bitmap(img);
+                        img.Dispose();
+                        pictureBox2.Image = bmp;
+                    }
 
                     //下方显示
                     //设置datagridview的数据源
