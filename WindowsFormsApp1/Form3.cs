@@ -17,6 +17,7 @@ using ZXing.Common;
 
 namespace WindowsFormsApp1
 {
+    //2019.12.09
     public partial class Form3 : Form
     {
         //用于接收form1传递过来的项目名   2019年11月10日_湖北大学_张三_2001
