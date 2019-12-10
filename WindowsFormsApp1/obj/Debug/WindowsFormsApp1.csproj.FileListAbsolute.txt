@@ -50,3 +50,22 @@ D:\fileCode\VSworkspace\图像采集系统\高校图像采集身份证阅读编�
 D:\fileCode\VSworkspace\图像采集系统\高校图像采集身份证阅读编号系统\高校图像采集身份证阅读编号系统\WindowsFormsApp1\bin\Debug\zxing.presentation.pdb
 D:\fileCode\VSworkspace\图像采集系统\高校图像采集身份证阅读编号系统\高校图像采集身份证阅读编号系统\WindowsFormsApp1\bin\Debug\zxing.presentation.xml
 D:\fileCode\VSworkspace\图像采集系统\高校图像采集身份证阅读编号系统\高校图像采集身份证阅读编号系统\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\zxing.dll
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\zxing.presentation.dll
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\zxing.pdb
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\zxing.xml
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\zxing.presentation.pdb
+C:\Users\yuan\Desktop\WindowsFormsApp1\bin\Debug\zxing.presentation.xml
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form2.resources
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form3.resources
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form4.resources
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\yuan\Desktop\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

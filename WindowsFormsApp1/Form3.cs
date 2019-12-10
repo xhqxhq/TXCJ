@@ -17,6 +17,7 @@ using ZXing.Common;
 
 namespace WindowsFormsApp1
 {
+    //2019.12.09
     public partial class Form3 : Form
     {
         //用于接收form1传递过来的项目名   2019年11月10日_湖北大学_张三_2001
@@ -50,16 +51,18 @@ namespace WindowsFormsApp1
             //给datagridview第一行设置红色背景(编号最大行)
             if (dataTable.Rows.Count == 0)
             {
-                MessageBox.Show("此项目中已编号学生数据为空!");
+                MessageBox.Show("此项目中学生数据为空!");
             }
             else
             {
                 dataGridView1.Rows[0].DefaultCellStyle.BackColor = Color.Red;
+                dataBind();
             }
             //列宽自适应
             Utils.CommonUtils.AutoSizeColumn(dataGridView1);
 
-
+            //缴费信息下拉框数据绑定
+            
         }
 
 
@@ -827,6 +830,76 @@ namespace WindowsFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //加载当前项目时就对下拉框绑定数据源（值为：当前展示数据中所有班级）
+        private void dataBind()
+        {
+            comboBox1.SelectedIndexChanged -= new System.EventHandler(comboBox1_SelectedIndexChanged);
+            
+            DataTable dataTable = dataGridView1.DataSource as DataTable;
+            DataTable dtTemporary = new DataTable();
+            DataView dataView = dataTable.DefaultView;
+
+            dtTemporary = dataView.ToTable(true, "7");
+
+            comboBox1.DataSource = dtTemporary;
+            comboBox1.DisplayMember = "7";//定义要显示的内容为列名为"xxx"的内容
+            comboBox1.ValueMember = "7";//定义要映射的值为"xxx"的值
+            comboBox1.SelectedIndex = 0;//初始显示第一个班级
+
+            comboBox1.SelectedIndexChanged += new System.EventHandler(comboBox1_SelectedIndexChanged);
+        }
+
+        //应采集人数
+        private string rawStudent(string className)
+        {
+            DataTable dataTable = dataGridView1.DataSource as DataTable;
+            DataTable dtTemporary = new DataTable();
+            DataView dataView = dataTable.DefaultView;
+
+            dataView.RowFilter = "[7] = '" + className + "'";
+
+            return dataView.Count.ToString();
+        }
+
+        //实采集人数
+        private string realisticStudent(string className)
+        {
+            DataTable dataTable = dataGridView1.DataSource as DataTable;
+            DataTable dtTemporary = new DataTable();
+            DataView dataView = dataTable.DefaultView;
+
+            dataView.RowFilter = "[7] = '" + className + "' and [13] = 0";
+            return dataView.Count.ToString(); ;
+        }
+
+        //实缴费人数
+        private string realisticPayment(string className)
+        {
+            DataTable dataTable = dataGridView1.DataSource as DataTable;
+            DataTable dtTemporary = new DataTable();
+            DataView dataView = dataTable.DefaultView;
+
+            dataView.RowFilter = "[7] = '" + className + "' and [12] = 0";
+            return dataView.Count.ToString();
+        }
+
+        //班级下拉框触发事件
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (textBox12.Text == "")//单价框为空时提示手动输入单价
+            {
+                MessageBox.Show("请输入该学校收费标准（整数）");
+            }
+            else
+            {
+                string className = comboBox1.SelectedValue.ToString();
+                label21.Text = rawStudent(className);
+                label28.Text = (int.Parse(label21.Text) - int.Parse(realisticStudent(className))).ToString();
+                label29.Text = (int.Parse(textBox12.Text) * int.Parse(label21.Text)).ToString();
+                label30.Text = (int.Parse(label21.Text) - int.Parse(realisticPayment(className))).ToString();
+            }
         }
     }
 }
