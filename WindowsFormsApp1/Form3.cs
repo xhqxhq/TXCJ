@@ -297,9 +297,10 @@ namespace WindowsFormsApp1
                             //对字符串进行处理
                             string dealPath = "\\编号数据导出-" + projectName + "-" + DateTime.Now.ToString().Replace("/", "-").Replace(":", "-") + ".xls";
                             string path = filePath + dealPath;
-
+                            //先查出已编号的数据
+                            DataTable dt = new AccessHelper(FileUtils.ProjectPath + projectName + "\\dbf\\photoSystem.accdb").GetDataTableFromDB("select * from info where ID <> null;");
                             //先将datatable中的数据导入到access中
-                            new AccessHelper(Application.StartupPath + "\\template\\base\\SummaryInfoDatabase\\photoSystem.accdb").InsertDataFormDatataleToSummaryInfo(dataTable);
+                            new AccessHelper(Application.StartupPath + "\\template\\base\\SummaryInfoDatabase\\photoSystem.accdb").InsertDataFormDatataleToSummaryInfo(dt);
 
                             //把SummaryInfo导入到excel表
                             new AccessHelper(Application.StartupPath + "\\template\\base\\SummaryInfoDatabase\\photoSystem.accdb").accessToExcel(path, "SummaryInfo");
@@ -352,13 +353,15 @@ namespace WindowsFormsApp1
                         //进行改名处理
 
                         //数据库中编号1对应照片名称DSC_0001.JPG    以此类推......
+                        //先查出已编号的数据
+                        DataTable dt = new AccessHelper(FileUtils.ProjectPath + projectName + "\\dbf\\photoSystem.accdb").GetDataTableFromDB("select * from info where ID <> null;");
                         //先获取已编号的学生数据
                         List<string> noPhotoList = new List<string>();
-                        for (int i = 0; i < dataTable.Rows.Count; i++)
+                        for (int i = 0; i < dt.Rows.Count; i++)
                         {
 
-                            string strId = int.Parse(dataTable.Rows[i][0].ToString()).ToString("0000");
-                            string strIdCardNum = dataTable.Rows[i][3].ToString();
+                            string strId = int.Parse(dt.Rows[i][0].ToString()).ToString("0000");
+                            string strIdCardNum = dt.Rows[i][3].ToString();
                             //string srcPath = FileUtils.ProjectPath + projectName + "\\photo\\DSC_" + strId + ".JPG";
                             string srcPath = filePath + "\\DSC_" + strId + ".JPG";
                             //进行改名并复制操作：
