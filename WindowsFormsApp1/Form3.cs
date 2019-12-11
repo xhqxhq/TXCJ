@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
             else
             {
                 dataGridView1.Rows[0].DefaultCellStyle.BackColor = Color.Red;
-                dataBind();
+                //dataBind();
             }
             //列宽自适应
             Utils.CommonUtils.AutoSizeColumn(dataGridView1);
@@ -845,9 +845,10 @@ namespace WindowsFormsApp1
         //加载当前项目时就对下拉框绑定数据源（值为：当前展示数据中所有班级）
         private void dataBind()
         {
-            comboBox1.SelectedIndexChanged -= new System.EventHandler(comboBox1_SelectedIndexChanged);
+            string sqlStr = "select * from info order by ID desc;";//所有数据
+            DataTable dataTable = new Utils.AccessHelper(Utils.FileUtils.ProjectPath + projectName + "\\dbf\\photoSystem.accdb").GetDataTableFromDB(sqlStr); comboBox1.SelectedIndexChanged -= new System.EventHandler(comboBox1_SelectedIndexChanged);
             
-            DataTable dataTable = dataGridView1.DataSource as DataTable;
+           // DataTable dataTable = dataGridView1.DataSource as DataTable;
             DataTable dtTemporary = new DataTable();
             DataView dataView = dataTable.DefaultView;
 
@@ -910,6 +911,11 @@ namespace WindowsFormsApp1
                 label29.Text = (int.Parse(textBox12.Text) * int.Parse(label21.Text)).ToString();
                 label30.Text = (int.Parse(label21.Text) - int.Parse(realisticPayment(className))).ToString();
             }
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            dataBind();
         }
     }
 }
