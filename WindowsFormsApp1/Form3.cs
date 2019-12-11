@@ -690,8 +690,15 @@ namespace WindowsFormsApp1
             wr.Format = BarcodeFormat.CODE_128;
 
             // 2.从datatable批量生成条形码图片并保存
-            string sqlStr = "select * from info order by ID desc;";//所有数据
+            string sqlStr = "select * from info order by ID desc;"; //所有数据
             dataTable = new Utils.AccessHelper(Utils.FileUtils.ProjectPath + projectName + "\\dbf\\photoSystem.accdb").GetDataTableFromDB(sqlStr);
+
+            // 保存图片前判断jpg文件夹是否存在？
+            string dirPath = System.AppDomain.CurrentDomain.BaseDirectory + "\\project\\" + projectName + "\\jpg";
+            if (!Directory.Exists(dirPath))//若文件夹不存在则新建文件夹   
+            {
+                Directory.CreateDirectory(dirPath); //新建文件夹   
+            }
 
             for (int i=0; i < dataTable.Rows.Count; i++)
             {
