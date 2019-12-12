@@ -14,6 +14,7 @@ using System.Xml;
 using System.Threading;
 using ZXing;
 using ZXing.Common;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApp1
 {
@@ -62,7 +63,7 @@ namespace WindowsFormsApp1
             Utils.CommonUtils.AutoSizeColumn(dataGridView1);
 
             //缴费信息下拉框数据绑定
-            
+
         }
 
 
@@ -357,13 +358,31 @@ namespace WindowsFormsApp1
                         DataTable dt = new AccessHelper(FileUtils.ProjectPath + projectName + "\\dbf\\photoSystem.accdb").GetDataTableFromDB("select * from info where ID <> null;");
                         //先获取已编号的学生数据
                         List<string> noPhotoList = new List<string>();
+                        //获取filePath下的所有文件名
+                        List<string> filenames = new List<string>();
+                        DirectoryInfo root = new DirectoryInfo(filePath);
+                        foreach (FileInfo f in root.GetFiles())
+                        {
+                            string filename = f.Name;
+                            filenames.Add(filename);
+                        }
+
                         for (int i = 0; i < dt.Rows.Count; i++)
                         {
-
                             string strId = int.Parse(dt.Rows[i][0].ToString()).ToString("0000");
                             string strIdCardNum = dt.Rows[i][3].ToString();
                             //string srcPath = FileUtils.ProjectPath + projectName + "\\photo\\DSC_" + strId + ".JPG";
-                            string srcPath = filePath + "\\DSC_" + strId + ".JPG";
+                            //string srcPath = filePath + "\\DSC_" + strId + ".JPG";  // 改为包含0001即可，因为不一定是DSC相机格式
+                            //文件名包含0001.JPG即可，因为不一定是DSC相机格式
+                            string srcPath = filePath + "\\";
+                            foreach (string filename in filenames)
+                            {
+                                if (filename.Contains(strId + ".jpg")) {
+                                    srcPath += filename;
+                                    break;
+                                }
+                            }
+
                             //进行改名并复制操作：
                             if (File.Exists(srcPath))
                             {
@@ -410,6 +429,17 @@ namespace WindowsFormsApp1
         //阅读身份证编号
         private void readIdCard_Click(object sender, EventArgs e)
         {
+            /*
+            以班级为单位排队照相，个别错误的个别修改！
+            1、管理员先手动输入班级
+            2、读身份证的同时写入班级（连续读身份证，班级不变）
+            */
+            // 提醒管理员输入这一队的班级
+            if (textBox7.Text == "") {
+                MessageBox.Show("请输入这一队的班级！");
+                return;
+            }
+
             /*if (thread!=null)           //说明此线程已经被开辟过，此时再进入这个代码就说明时重复点击按钮，弹出提示
             {
                 MessageBox.Show("请不要重复点击！");
@@ -567,10 +597,11 @@ namespace WindowsFormsApp1
                     DataTable dataTable1 = accessHelper.GetDataTableFromDB("select * from info where idCardNum = '" + Code + "' ");
                     int count = dataTable1.Rows.Count;
 
+                    string stuClass = textBox7.Text.Trim();  //班级
                     //如果有：
                     if (count != 0)
                     {
-                        //给次学生编号
+                        //给此学生编号
                         accessHelper.ExcuteSql("update info set ID = " + maxId + " where idCardNum = '" + Code + "' ");
                     }
                     else
@@ -583,7 +614,7 @@ namespace WindowsFormsApp1
                         //新增之后立马输出这个学生的身份证，姓名，照片编号，代表此学生已经照相
                         string sqlStr = string.Format("Insert into info (" +
                                  "ID , stuName,	stuSex,	idCardNum,	stuID,	stuDepartment,	stuProfession,	stuClass,	stuLevel,	years,   grade, graduateYear,	isPay ,isPhoto , isManual" +
-                                 ") Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')", maxId, Name, Gender, Code, "", "", "", "", "", "", "", "", isPay, isPhoto, isManual);
+                                 ") Values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}','{14}')", maxId, Name, Gender, Code, "", "", "", stuClass, "", "", "", "", isPay, isPhoto, isManual);
                         accessHelper.ExcuteSql(sqlStr);
                     }
 
@@ -630,6 +661,8 @@ namespace WindowsFormsApp1
 
                     //清除textbox
                     clearTextbox();
+                    //保留这一队的班级
+                    textBox7.Text = stuClass;
 
                     //进行弹窗照相操作
                     string showStr = Code + "\n" + Name + "\n" + maxId;
