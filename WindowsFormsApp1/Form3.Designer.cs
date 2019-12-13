@@ -611,7 +611,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.groupBox4.Size = new System.Drawing.Size(1526, 326);
+            this.groupBox4.Size = new System.Drawing.Size(1526, 466);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "数据展示";
@@ -682,7 +682,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1507, 241);
+            this.dataGridView1.Size = new System.Drawing.Size(1507, 381);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 

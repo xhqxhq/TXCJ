@@ -666,8 +666,10 @@ namespace WindowsFormsApp1
 
                     //进行弹窗照相操作
                     string showStr = Code + "\n" + Name + "\n" + maxId;
-                    MessageBox.Show(showStr);
-
+                    //MessageBox.Show(showStr);
+                    Form5 form5 = new Form5();
+                    form5.setLabel(showStr);
+                    form5.ShowDialog();
                 }
                 catch (Exception exception)
                 {
